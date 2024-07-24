@@ -1,0 +1,236 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+.landing-page {
+    background: url('image4.JPG') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    border: none;
+    background-color: #af4c82;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.friendship-review-page {
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url('https://www.example.com/floral-background.jpg') repeat;
+}
+
+.review-content {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.memory-lane {
+    display: flex;
+    overflow-x: scroll;
+    width: 100%;
+    padding: 10px;
+    gap: 20px;
+    scroll-snap-type: x mandatory;
+}
+
+.memory-item {
+    min-width: 300px;
+    scroll-snap-align: start;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s;
+}
+
+.memory-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.memory-item p {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #333;
+}
+
+.countdown-timer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.wait-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #FFA07A;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    pointer-events: none;
+    transition: background-color 0.3s ease;
+}
+
+.wait-button:hover {
+    background-color: #FF7F50;
+}
+
+.balloon-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.balloon {
+    position: absolute;
+    bottom: -100px;
+    width: 50px;
+    height: 70px;
+    background-color: red;
+    border-radius: 50%;
+    animation: float 5s infinite ease-in;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-120vh);
+        opacity: 0;
+    }
+}
+
+.clown-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+}
+
+.glitch-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    overflow: hidden;
+    pointer-events: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.glitch-text {
+    font-size: 20px;
+    color: white;
+    animation: glitch 0.2s infinite;
+}
+
+@keyframes glitch {
+    0% {
+        transform: translate(0, 0);
+        color: red;
+    }
+    33% {
+        transform: translate(2px, -2px);
+        color: green;
+    }
+    66% {
+        transform: translate(-2px, 2px);
+        color: blue;
+    }
+    100% {
+        transform: translate(0, 0);
+        color: white;
+    }
+}
+
+.final-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    animation: finalMessage 2s infinite;
+}
+
+@keyframes finalMessage {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .landing-page, .friendship-review-page, .final-message {
+        padding: 10px;
+    }
+
+    .memory-lane {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .memory-item {
+        min-width: 80%;
+        margin-bottom: 20px;
+    }
+}
